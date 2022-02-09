@@ -8,5 +8,6 @@ i=='o' or i=='U' or i=='I'):
 		vow=vow+1;
 	else:
 		cons=cons+1;
+print('total letters counted: ', vow + cons);
 print('vowels counted: ',vow);
 print('consonants counted: ',cons);
