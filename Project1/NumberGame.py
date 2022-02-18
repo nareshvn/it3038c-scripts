@@ -1,4 +1,4 @@
-
+# Generate Random Number
 print("Guess a number game....");
 from random import seed
 from random import randint
