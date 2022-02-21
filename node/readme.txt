@@ -1,5 +1,5 @@
 server.js runs succesffuly reporting Hostname, IP, Server Uptime, Total & Free Memory including Number of CPUs.
- Hostname: uc-nareshvn
+Hostname: uc-nareshvn
 
 IP: 192.168.33.69
 
