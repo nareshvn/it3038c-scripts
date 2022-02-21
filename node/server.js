@@ -2,7 +2,7 @@ var http = require("http");
 var fs = require("fs");
 var os = require("os");
 var ip = require("ip");
- 
+
 http.createServer(function(req, res){
 
         if (req.url === "/"){
