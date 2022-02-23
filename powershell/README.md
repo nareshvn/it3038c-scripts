@@ -1,5 +1,6 @@
 # README
 ## User_info.ps1 gets the LocalUser, ComputerInfo and the User's Clipboard information
+## Writes the collected info into a text file (user_info.txt)
 ### Info: UserName: Administrator 
 ### Info: UserName: CECHUser 
 ### Info: UserName: DefaultAccount 
