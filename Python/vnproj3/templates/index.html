@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+{% block content %}
+
+<p style="font-size:20px; font-style:bold; text-align:left;"><em> What is your name ? </em></p>
+<form action = "/welcome" method ="POST">
+        <label for "myName" id="myName"> <input type="text" color:white; font-size:20px; background-color:red; name="myName">
+        <br>
+        <p style="font-size:20px; font-style:bold; text-align:left;"><em>Would you like to do some shopping?</em></p>
+        <p style="font-size:14px; font-style:bold; text-align:left;"><em>What would you like to shop for ?</em></p> </b>
+        <label for 'shop_for' id='shop_for'>
+        <input type='text' name ='shop_for'>
+        <p style="font-size:20px; font-style:bold; text-align:left;"><em> Select your shopping vendor:</em> </p>
+        <div>
+        <input type = "radio" name="vendor" value ="Amazon" id="amz"><label for="amz">Amazon</label>
+        </div>
+        <div>   <input type = "radio" name="vendor" value ="Etsy" id="etsy"><label for="etsy">Etsy</label>
+        </div>
+        <div>   <input type = "radio" name="vendor" value ="Google" id="google"><label for="google">Google</label>
+        </div>
+        <p>
+        <p id="output"></p>
+        <script>
+        const btn = document.querySelector('#btn');
+        const radioButtons = document.querySelectorAll('input[name="vendor"]');
+        btn.addEventListener("click", () => {
+            let selectedVendor;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedVendor = radioButton.value;
+                    break;
+                }
+            }
+            // show the output:
+            output.innerText = selectedVendor ? `You selected ${selectedVendor}` : `You haven't selected any vendor`;
+        });
+
+        </script>       
+        <br>
+        <br>
+        <b>Enter a country to view the Covid Cases Update for today <b>
+        <label for "cCtry" id="cCtry"> <input type="text" name="cCtry">
+        <p>
+        <br>
+        </p>
+        <input type="submit" value="Submit">
+</form>
+{% endblock %}

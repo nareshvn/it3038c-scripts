@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<p style="color:#009900; font-size:32px; font-style:bold; text-align:center;"><em><b> System Information</mark></b> </em> </p>
+<br>
+<b> System information:<b>
+<p>
+<ol>
+        <li>System Name: {{sys_data[3] }}</li>
+        <li>Machine Name: {{sys_data[1] }}</li>
+        <li>Version :{{sys_data[0]}}</li>
+        <li>Release :{{sys_data[2]}}</li>
+</ol>
+</p>
+{% endblock %}

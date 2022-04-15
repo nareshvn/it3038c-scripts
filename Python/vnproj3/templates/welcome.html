@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<p style="color:#009900; font-size:32px; font-style:bold; text-align:center;"><em><b> Hello!<mark>{{ myName }}</mark></b> </em> </p>
+<br>
+<b> Glad, You like to shop for <mark> {{ shop_for }}</mark>, at <mark>{{ vendor }}</mark> <b>
+{% if vendor =='Amazon' %}
+<a href ="https://www.amazon.com/s?k={{shop_for}}" target="_blank">Enjoy your shopping</a>
+{% endif %}
+{% if vendor == 'Etsy' %}
+<a href ="https://www.etsy.com/search?q={{shop_for}}" target="_blank">Enjoy your shopping</a>
+{% endif %}
+{% if vendor == 'Google' %}
+<a href= "https://www.google.com/search?tbm=shop&hl=en-US&q={{shop_for}} &oq={{shop_for}}" target="_blank">Enjoy your shopping</a>
+{% endif %}
+<br>
+Today for the chosen country,<mark> {{ cCtry }}</mark>, here is the
+<a href ="https://www.worldometers.info/coronavirus/country/{{cCtry}}" target="_blank">Covid Data</a>
+<br>
+<p>
+<br>
+This link will help you upload any CSV file and view it in HTML page.
+<a href ="./table" target="_blank">File Upload</a>
+</br>
+<br>Your system information:
+<a href ="./sysinfo">Click Here</a>
+</br>
+
+</p>
+{% endblock %}
+
